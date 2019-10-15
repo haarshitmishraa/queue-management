@@ -1,0 +1,26 @@
+{% extends 'queue_app/base.html' %}
+{% load static%}
+{% load staticfiles %}
+
+                {% block content %}
+                <form class="login100-form validate-form" method="POST" action="{% url 'nextone'  %}">
+                    {% csrf_token %}
+
+                
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn">
+                            Next 
+                        </button>
+                    </div>
+                </div>
+
+                
+            </form>
+
+         <ul>
+           <li>Total left: {{next}}</li>
+         </ul>
+                
+				{% endblock content %}
